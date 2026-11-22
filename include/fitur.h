@@ -2,7 +2,7 @@
 #define FITUR_H
 
 typedef struct {
-    int id;
+    int pengenal;
         char tanggal[15];
         char jenis[10]; 
         double jumlah;
