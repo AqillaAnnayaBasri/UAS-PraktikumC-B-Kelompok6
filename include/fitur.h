@@ -4,10 +4,10 @@
 // Struktur data untuk menyimpan detail transaksi keuangan
 typedef struct {
     int id;
-    char tanggal[15];
-    char jenis[10]; // "Pemasukan" atau "Pengeluaran"
-    double jumlah;
-    char kategori[50];
+        char tanggal[15];
+        char jenis[10]; // "Pemasukan" atau "Pengeluaran"
+        double jumlah;
+        char kategori[50];
 } Transaksi;
 
 // Prototipe fungsi utama
