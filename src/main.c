@@ -33,7 +33,8 @@ int main(void) {
                 printf("\nPilihan tidak tersedia. Silakan pilih 1-3.\n");
                 break;
         }
-    } while (pilihan != 3);
+        
+    }  while (pilihan != 3);
 
     return 0;
 }
