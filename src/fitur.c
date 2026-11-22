@@ -15,10 +15,10 @@ static void hapusNewline(char *teks) {
 
 void tampilkanMenu(void) {
     printf("\n=== APLIKASI PENCATAT KEUANGAN PRIBADI ===\n");
-    printf("1. Tambah Transaksi\n");
-    printf("2. Lihat Riwayat Keuangan\n");
-    printf("3. Keluar\n");
-    printf("Pilih menu (1-3): ");
+        printf("1. Tambah Transaksi\n");
+            printf("2. Lihat Riwayat Keuangan\n");
+                printf("3. Keluar\n");
+                    printf("Pilih menu (1-3): ");
 }
 
 void tambahTransaksi(void) {
@@ -29,26 +29,26 @@ void tambahTransaksi(void) {
         return;
     }
 
-    printf("\n--- Tambah Transaksi ---\n");
-    printf("ID / Pengenal: ");
-    scanf("%d", &t.pengenal);
-    bersihkanBuffer();
+        printf("\n--- Tambah Transaksi ---\n");
+        printf("ID / Pengenal: ");
+        scanf("%d", &t.pengenal);
+        bersihkanBuffer();
 
-    printf("Tanggal (DD-MM-YYYY): ");
-    fgets(t.tanggal, sizeof(t.tanggal), stdin);
-    hapusNewline(t.tanggal);
+        printf("Tanggal (DD-MM-YYYY): ");
+        fgets(t.tanggal, sizeof(t.tanggal), stdin);
+        hapusNewline(t.tanggal);
 
-    printf("Jenis (Masuk/Keluar): ");
-    fgets(t.jenis, sizeof(t.jenis), stdin);
-    hapusNewline(t.jenis);
+        printf("Jenis (Masuk/Keluar): ");
+        fgets(t.jenis, sizeof(t.jenis), stdin);
+        hapusNewline(t.jenis);
 
-    printf("Kategori: ");
-    fgets(t.kategori, sizeof(t.kategori), stdin);
-    hapusNewline(t.kategori);
+        printf("Kategori: ");
+        fgets(t.kategori, sizeof(t.kategori), stdin);
+        hapusNewline(t.kategori);
 
-    printf("Jumlah (Rp): ");
-    scanf("%lf", &t.jumlah);
-    bersihkanBuffer();
+        printf("Jumlah (Rp): ");
+        scanf("%lf", &t.jumlah);
+        bersihkanBuffer();
 
     fwrite(&t, sizeof(Transaksi), 1, fp);
     fclose(fp);
@@ -64,7 +64,7 @@ void lihatRiwayat(void) {
         return;
     }
 
-    printf("\n--- Riwayat Keuangan ---\n");
+        printf("\n--- Riwayat Keuangan ---\n");
     int adaData = 0;
     while (fread(&t, sizeof(Transaksi), 1, fp) == 1) {
         adaData = 1;
